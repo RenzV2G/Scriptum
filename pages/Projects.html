@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="./style/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        
+        <!--Navigation-->
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="../index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./AboutMe.html">
+                        <li>About Me</li>
+                    </a>
+                    <a href="./Contact.html">
+                        <li>Contact Me</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- slider -->
+
+    <div class="slider">
+        <!-- list Items -->
+        <div class="list">
+
+            <div class="item active">
+                <img src="./style/images/projects/infinitykicks.png">
+                <div class="content">
+                    <p>Wordpress</p>
+                    <h2>InfinityKicks</h2>
+                    <p>A wordpress website with SEO practices that we made
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./style/images/projects/iroyale.png">
+                <div class="content">
+                    <p>Integration/bitbucket</p>
+                    <h2>iRoyale</h2>
+                    <p>We made a integrated by jira, auto email, and jira. This is a bitbucket website also
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./style/images/projects/RJRJ.png">
+                <div class="content">
+                    <p>PHP</p>
+                    <h2>RJRJ</h2>
+                    <p>A working PHP database form that can send emails through the company and be kept in the database of the website
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev">
+                <</button>
+                    <button id="next">></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="./style/images/projects/infinitykicks.png">
+                <div class="content">
+                    InfinityKicks
+                </div>
+            </div>
+            <div class="item">
+                <img src="./style/images/projects/iroyale.png">
+                <div class="content">
+                    iRoyale
+                </div>
+            </div>
+            <div class="item">
+                <img src="./style/images/projects/RJRJ.png">
+                <div class="content">
+                    RJRJ
+                </div>
+            </div>
+
+
+<!--
+            <div class="item">
+                <img src="">
+                <div class="content">
+                    Name Slider
+                </div>
+            </div>
+-->
+
+        </div>
+    </div>
+
+
+
+    <!--Scripts downhere-->
+    <script>
+        let items = document.querySelectorAll('.slider .list .item');
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+        // config param
+        let countItem = items.length;
+        let itemActive = 0;
+        // event next click
+        next.onclick = function () {
+            itemActive = itemActive + 1;
+            if (itemActive >= countItem) {
+                itemActive = 0;
+            }
+            showSlider();
+        }
+        //event prev click
+        prev.onclick = function () {
+            itemActive = itemActive - 1;
+            if (itemActive < 0) {
+                itemActive = countItem - 1;
+            }
+            showSlider();
+        }
+        // auto run slider
+        let refreshInterval = setInterval(() => {
+            next.click();
+        }, 9000)
+        function showSlider() {
+            // remove item active old
+            let itemActiveOld = document.querySelector('.slider .list .item.active');
+            let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+            itemActiveOld.classList.remove('active');
+            thumbnailActiveOld.classList.remove('active');
+
+            // active new item
+            items[itemActive].classList.add('active');
+            thumbnails[itemActive].classList.add('active');
+
+            // clear auto time run slider
+            clearInterval(refreshInterval);
+            refreshInterval = setInterval(() => {
+                next.click();
+            }, 5000)
+        }
+
+        // click thumbnail
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', () => {
+                itemActive = index;
+                showSlider();
+            })
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="./style/style1.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+        <div class="divider">
+            <div class="left-side">
+                <div class="content">
+
+
+                    <!--Navigation-->
+                    <nav role="navigation">
+                        <div id="menuToggle">
+                            <input type="checkbox" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <ul id="menu">
+                                <a href="../index.html">
+                                    <li>Home</li>
+                                </a>
+                                <a href="./Projects.html">
+                                    <li>Projects</li>
+                                </a>
+                                <a href="./Contact.html">
+                                    <li>Contact Me</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <img src="./style/images/logo.png" alt="Logo" class="logo-icon">
+
+
+                    <!-- Left side content -->
+                    <div class="hero">
+                        <div class="hero-content">
+                            <script type="module"
+                                src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
+                            <spline-viewer url="https://prod.spline.design/b76fPelONCUS9xUw/scene.splinecode"
+                                events-target="global"></spline-viewer>
+
+                            <h1 class="heading">Hey! I Am Renz Vitug.</h1>
+                            <p class="paragraph">Welcome to my website, my name is Renz Vitug a Web Developer and a Graphic Designer blending two worlds
+                                to create and design aesthetic and abstract website. I strived to be better and to learn various designs, 
+                                programming language, and skills physically. I am the founder or the Programmer holding the Scriptum, and 
+                                Scriptum reminds me of myself being consistent with the rhytm to my works. 
+                            </p>
+
+                            <a href="../assets/My Resume.pdf">
+                                <h3 class="d-1">Resume</h3>
+                            </a>
+                            <a href="#">
+                                <h3 class="d-1">CV</h3>
+                            </a>
+                            <a href="#" onclick="openOverlay()">
+                                <h3 class="d-1">Skills & Education</h3>
+                            </a>
+
+                            <a href="#" onclick="openOverlay1()">
+                                <h3 class="d-1">Certificates</h3>
+                            </a>
+
+
+
+                            <!--Skills and Education-->
+                            <div id="skillsEducationOverlay" class="overlay">
+                                <div class="overlay-content">
+
+                                    <div class="sub_cnt">
+                                        <button class="hover" onclick="closeOverlay()">
+                                            <span class="arrow"></span>
+                                        </button>
+                                    </div>
+                                    <!-- Content for Skills & Education goes here -->
+
+
+                                    <h1>Skills</h1>
+                                    <div class="divider-line"></div>
+                                    <!-- Skills: -->
+
+                                    <div class="skill-cards-container">
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="75" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">HTML</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">75%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="60" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">CSS</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">60%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="40" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">java</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">40%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="40" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">javaScript</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">30%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="75" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">Python</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">75%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="75" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">Dart</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">75%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="40" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">javaScript</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">30%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="80" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">WordPress</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">80%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="60" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">Integration</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">60%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="40" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">mySQL</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">40%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="50" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">Photoshop</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">50%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="40" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">vueJS</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">40%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="skill-card">
+                                            <div class="skill-bar-container">
+                                                <svg class="skill-bar" viewBox="0 0 100 100">
+                                                    <circle class="background-circle" cx="50" cy="50" r="45" />
+                                                    <circle class="progress-circle" cx="50" cy="50" r="45"
+                                                        data-percentage="70" /> <!-- Assuming 50% progress -->
+                                                    <!-- Text for HTML -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="-0.5em">PHP</text>
+                                                    <!-- Text for percentage -->
+                                                    <text x="50%" y="50%" text-anchor="middle"
+                                                        dominant-baseline="middle" dy="0.5em"
+                                                        class="skill-percent">70%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Skills: -->
+
+                                    <h1>Education</h1>
+                                    <div class="divider-line"></div>
+
+                                    <!--School Gallery-->
+                                    <div class="wrapper">
+                                        <div class="container">
+                                            <input type="radio" name="slide" id="c1" checked>
+                                            <label for="c1" class="card">
+                                                <div class="row">
+                                                    <div class="icon">1</div>
+                                                    <div class="description">
+                                                        <h4> Elementary - Cabetican Elementary School</h4>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </label>
+
+                                            <input type="radio" name="slide" id="c2">
+                                            <label for="c2" class="card">
+                                                <div class="row">
+                                                    <div class="icon">2</div>
+                                                    <div class="description">
+                                                        <h4>Junior High - Holy Angel University</h4>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </label>
+
+                                            <input type="radio" name="slide" id="c3">
+                                            <label for="c3" class="card">
+                                                <div class="row">
+                                                    <div class="icon">3</div>
+                                                    <div class="description">
+                                                        <h4>Senior High - Holy Angel University</h4>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </label>
+
+                                            <input type="radio" name="slide" id="c4">
+                                            <label for="c4" class="card">
+                                                <div class="row">
+                                                    <div class="icon">4</div>
+                                                    <div class="description">
+                                                        <h4>College(ongoing) - Holy Angel University</h4>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            </label>
+
+                                        </div>
+                                    </div>
+
+                                    <!--Add more gallery here-->
+                                    
+
+                                </div>
+                            </div>
+
+                            <!--Certificates-->
+                            <div id="skillsEducationOverlay1" class="overlay">
+                                <div class="overlay-content">
+
+                                    <div class="sub_cnt">
+                                        <button class="hover" onclick="closeOverlay1()">
+                                            <span class="arrow"></span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Content for Certificate -->
+                                    <h1>Certificate</h1>
+                                    <div class="divider-line"></div>
+
+                                    <!--Row 1-->    
+                                    <div class="card-container1">
+                                        <div class="card1">
+                                            <img src="./style/Certificates/CC.png">
+                                            <div class="card-content1">
+                                                <h1>Code geeks</h1>
+                                                <p>Certificate from participation in Code Geeks</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card1">
+                                            <img src="./style/Certificates/certi2.png">
+                                            <div class="card-content1">
+                                                <h1>Google analytics</h1>
+                                                <p>Google analytics online course</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card1">
+                                            <img src="./style/Certificates/certificate.JPG">
+                                            <div class="card-content1">
+                                                <h1>Google analytics</h1>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!--Row 2-->
+                                    <div class="card-container1">
+
+                            
+                                        <div class="card1">
+                                            <img src="./style/Certificates/RHC.png">
+                                            <div class="card-content1">
+                                                <h1>Red Hat Academy</h1>
+                                                <p>Certification from Red Hat Academy online course</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card1">
+                                            <img src="./style/Certificates/skillshop.png">
+                                            <div class="card-content1">
+                                                <h1>Google analytics skillshop</h1>
+                                            </div>
+                                        </div>
+
+                                        <div class="card1">
+                                            <img src="./style/Certificates/CSEC.png">
+                                            <div class="card-content1">
+                                                <h1>CyberSecurity Cisco</h1>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!--Row 3-->
+                                    <div class="card-container1">
+
+                            
+                                        <div class="card1">
+                                            <img src="./style/Certificates/IoT.png">
+                                            <div class="card-content1">
+                                                <h1>Internet of Things Cisco</h1>
+                                            </div>
+                                        </div>
+
+                                        <div class="card1">
+                                            <img src="./style/Certificates/Loop.jpg">
+                                            <div class="card-content1">
+                                                <h1>Code to Death</h1>
+                                                <p>A python programming contest from our department</p>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <footer>
+                        <div>
+                        </div>
+                    </footer>
+
+
+                </div>
+            </div>
+
+
+            <div class="right-side">
+                <div class="gradient-overlay"></div>
+                <div class="slider">
+                    <img src="./style/images/aboutme.jpg" alt="Image 1">
+                    <img src="./style/images/aboutme1.jpeg" alt="Image 2">
+                    <img src="./style/images/aboutme2.jpeg" alt="Image 3">
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+
+
+
+
+    <script>
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector('.slider');
+            const images = slider.querySelectorAll('img');
+            let currentImageIndex = 0;
+
+            function showNextImage() {
+                // Fade out the current image
+                images[currentImageIndex].classList.remove('active');
+
+                // Move to the next image
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+
+                // Fade in the next image
+                images[currentImageIndex].classList.add('active');
+            }
+
+            // Show the first image immediately
+            images[currentImageIndex].classList.add('active');
+
+            // Set interval for slide transition
+            setInterval(showNextImage, 5000); // Change image every 5 seconds
+        });
+
+
+
+
+        // Function to open the overlay
+        function openOverlay() {
+            var overlay = document.getElementById("skillsEducationOverlay");
+            overlay.style.display = "block"; // Display the overlay
+            setTimeout(function () {
+                overlay.querySelector(".overlay-content").style.opacity = "1"; // Fade in the content after a short delay
+            }, 500);
+        }
+
+        // Function to close the overlay
+        function closeOverlay() {
+            var overlay = document.getElementById("skillsEducationOverlay");
+            overlay.querySelector(".overlay-content").style.opacity = "0"; // Fade out the content
+            setTimeout(function () {
+                overlay.style.display = "none"; // Hide the overlay after the content fades out
+            }, 500); // Adjust this delay to match the transition duration
+        }
+
+
+
+
+        // Certificate Overlay
+        function openOverlay1() {
+            var overlay = document.getElementById("skillsEducationOverlay1");
+            overlay.style.display = "block"; // Display the overlay
+            setTimeout(function () {
+                overlay.querySelector(".overlay-content").style.opacity = "1"; // Fade in the content after a short delay
+            }, 500);
+        }
+
+        // Function to close the overlay
+        function closeOverlay1() {
+            var overlay = document.getElementById("skillsEducationOverlay1");
+            overlay.querySelector(".overlay-content").style.opacity = "0"; // Fade out the content
+            setTimeout(function () {
+                overlay.style.display = "none"; // Hide the overlay after the content fades out
+            }, 500); // Adjust this delay to match the transition duration
+        }
+
+
+
+
+        //Progress bar
+        const skillPercent = document.querySelector('.skill-percent');
+        const progressCircles = document.querySelectorAll('.progress-circle');
+
+        // Update the progress bar's stroke-dasharray value
+        progressCircles.forEach(circle => {
+            const circumference = 2 * Math.PI * 45; // Approximate circumference of the circle
+            const percentage = circle.getAttribute('data-percentage');
+            const dashOffset = circumference - (circumference * percentage / 100);
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.style.strokeDashoffset = dashOffset;
+
+            // Update the text content
+            skillPercent.textContent = `${percentage}%`;
+        });
+
+
+
+    </script>
+</body>
+
+</html>
