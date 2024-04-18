@@ -1,26 +1,26 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 }
 
-.divider{
-    width: 100%;
-    height: 100vh;
-    display: flex;
+.divider {
+  width: 100%;
+  height: 100vh;
+  display: flex;
 
 }
 
-.left-side{
-    flex: 1;
-    background: #eeeedd;
-    height: 100vh;
+.left-side {
+  flex: 1;
+  background: #eeeedd;
+  height: 100vh;
 }
 
 
 /*Right Side*/
-.right-side{
+.right-side {
   flex: 1;
   height: 100%;
   background-size: cover;
@@ -46,7 +46,8 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* Ensure images are above the gradient */
+  z-index: 1;
+  /* Ensure images are above the gradient */
 }
 
 .right-side .slider img.active {
@@ -60,63 +61,64 @@ body{
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.231), rgba(0, 0, 0, 0.478));
-  z-index: 2; /* Ensure overlay is above the images */
+  z-index: 2;
+  /* Ensure overlay is above the images */
 }
 
 
 @media screen and (max-width: 768px) {
   .right-side .slider img {
-      width: auto;
-      height: 100%;
+    width: auto;
+    height: 100%;
   }
 }
 
 
-.content{
-    min-height: 450px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.content {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .content nav {
-    flex: 2;
-    border-bottom: 3px solid;
-    display: flex;
+  flex: 2;
+  border-bottom: 3px solid;
+  display: flex;
 }
 
-.content nav ul{
-    flex: 1;
-    list-style-type: none;
+.content nav ul {
+  flex: 1;
+  list-style-type: none;
 }
 
-.content nav .right-links{
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-.content nav .right-links li{
-    margin-right: 10px;   
+.content nav .right-links {
+  display: flex;
+  justify-content: flex-end;
 }
 
 
-.content .hero{
-    display: flex;
-    flex: 8;
-    justify-content: center;
-    align-items: center;
+.content nav .right-links li {
+  margin-right: 10px;
+}
+
+
+.content .hero {
+  display: flex;
+  flex: 8;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
 /*Fotter section*/
 
-.content footer{
-    flex: 1;
-    background: rgba(0, 0, 199, 0.815);
-    border-top: 2px solid #000000;
-    height: auto;
+.content footer {
+  flex: 1;
+  background: rgba(0, 0, 199, 0.815);
+  border-top: 2px solid #000000;
+  height: auto;
 }
 
 
@@ -124,80 +126,75 @@ body{
 /*Menu*/
 
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: relative;
   top: 40px;
   left: 30px;
-  
+
   z-index: 1;
-  
+
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
   text-decoration: none;
   color: #000000;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+#menuToggle a:hover {
   color: rgb(0, 0, 0);
 }
 
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
+
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+
   -webkit-touch-callout: none;
 }
 
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
+
   background: #000000;
   border-radius: 3px;
-  
+
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
@@ -205,8 +202,7 @@ body{
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
@@ -215,8 +211,7 @@ body{
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -224,8 +219,7 @@ body{
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -233,8 +227,7 @@ body{
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
   position: absolute;
   width: 300px;
   margin: -100px 0 0 -50px;
@@ -246,15 +239,14 @@ body{
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
+
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
@@ -262,57 +254,63 @@ body{
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked~ul {
   transform: none;
 }
 
 /*---------------------------------------*/
 
 .left-side {
-    position: relative; /* Set position to relative */
-    flex: 1;
-    background: #eeeedd;
-    height: 100vh;
+  position: relative;
+  /* Set position to relative */
+  flex: 1;
+  background: #eeeedd;
+  height: 100vh;
 }
 
 
 
 .logo-icon {
-    position: absolute; /* Position the logo absolutely */
-    top: 25px; /* Adjust the top position */
-    right: 30px; /* Adjust the right position */
-    width: auto; /* Adjust width as needed */
-    height: 59px; /* Maintain aspect ratio */
+  position: absolute;
+  /* Position the logo absolutely */
+  top: 25px;
+  /* Adjust the top position */
+  right: 30px;
+  /* Adjust the right position */
+  width: auto;
+  /* Adjust width as needed */
+  height: 59px;
+  /* Maintain aspect ratio */
 }
 
 .content {
-    min-height: 450px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .hero-content {
-  margin-bottom: 30px; /* Add some spacing between the heading and paragraph */
+  margin-bottom: 30px;
+  /* Add some spacing between the heading and paragraph */
   margin-left: 40px;
   margin-right: 50px;
-  
+
 }
 
-.hero-content a{
+.hero-content a {
   display: inline-block;
   text-decoration: none;
   color: #000000;
 }
 
-.hero-content .heading{
+.hero-content .heading {
   font-family: "Prompt", sans-serif;
   font-size: 2.5em;
   font-weight: bold;
 }
 
-.hero-content .paragraph{
+.hero-content .paragraph {
   font-family: "Nanum Gothic Coding", monospace;
   font-weight: 570;
   font-size: 20px;
@@ -322,81 +320,95 @@ body{
 
 /*Resume Button*/
 .d-1 {
-  --b:.1px;   /* border length*/
-  --c:20px;  /* the cube perspective */
-  --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
-  
-  
-  padding:8px;
+  --b: .1px;
+  /* border length*/
+  --c: 20px;
+  /* the cube perspective */
+  --g: calc(var(--c)*0.707);
+  /* 0.707 = cos(45deg) = sin(45deg) */
+
+
+  padding: 8px;
   transition: 0.5s;
   border: solid transparent;
-  border-width:var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+  border-width: var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
   background:
-    linear-gradient(-45deg,transparent var(--g),rgba(255,255,255,0.6) 0) left  /var(--c) 100%,
-    linear-gradient(135deg,transparent var(--g),rgba(0, 0, 0, 0.3) 0) bottom /100% var(--c),
-    conic-gradient(from -90deg at top var(--b)   right var(--b),currentColor 270deg,transparent 0),
-    conic-gradient(from  90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)),currentColor 270deg,transparent 0) ;
-  background-repeat:no-repeat;
-  background-origin:border-box;
-  transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
-  clip-path: 
-    polygon(var(--c) 0%, var(--c) 0%, 
-    100% 0%, 
-    100% calc(100% - var(--c)),100% calc(100% - var(--c)),
-    var(--c) calc(100% - var(--c)),
-    var(--c) calc(100% - var(--c)));
+    linear-gradient(-45deg, transparent var(--g), rgba(255, 255, 255, 0.6) 0) left /var(--c) 100%,
+    linear-gradient(135deg, transparent var(--g), rgba(0, 0, 0, 0.3) 0) bottom /100% var(--c),
+    conic-gradient(from -90deg at top var(--b) right var(--b), currentColor 270deg, transparent 0),
+    conic-gradient(from 90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)), currentColor 270deg, transparent 0);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  transform: translate(calc(var(--c)/-1), calc(var(--c)/1));
+  clip-path:
+    polygon(var(--c) 0%, var(--c) 0%,
+      100% 0%,
+      100% calc(100% - var(--c)), 100% calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)));
 
 }
+
 .d-1:hover {
-  transform:translate(0,0);
-  clip-path: 
-    polygon(0% var(--c), var(--c) 0%, 
-    100% 0%, 
-    100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
-    0% 100%,0% 100%);
+  transform: translate(0, 0);
+  clip-path:
+    polygon(0% var(--c), var(--c) 0%,
+      100% 0%,
+      100% calc(100% - var(--c)), calc(100% - var(--c)) 100%,
+      0% 100%, 0% 100%);
 }
 
 @media screen and (max-width: 768px) {
   .divider {
-      flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
+    /* Stack elements vertically */
   }
 
   .left-side {
-      order: 2; /* Move left side below right side */
+    order: 2;
+    /* Move left side below right side */
   }
 
   .right-side {
-      order: 1; /* Move right side above left side */
+    order: 1;
+    /* Move right side above left side */
   }
 
   .right-side {
-      background-position: center; /* Center background image */
+    background-position: center;
+    /* Center background image */
   }
 
   .right-side .slider img {
-      width: 100%; /* Ensure images take full width */
-      height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    /* Ensure images take full width */
+    height: auto;
+    /* Maintain aspect ratio */
   }
 
   .content {
-      padding: 20px; /* Add padding to content */
+    padding: 20px;
+    /* Add padding to content */
   }
 
   .content footer ul {
-      justify-content: center; /* Center items horizontally */
+    justify-content: center;
+    /* Center items horizontally */
   }
 
   .content footer li {
-      margin: 10px; /* Add some spacing between items */
+    margin: 10px;
+    /* Add some spacing between items */
   }
-  .logo-icon{
+
+  .logo-icon {
     height: 50px;
     top: 13px;
   }
 }
 
-@media screen and (max-width: 450px){
-  .logo-icon{
+@media screen and (max-width: 450px) {
+  .logo-icon {
     height: 40px;
     top: 4px;
   }
@@ -410,30 +422,38 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(./bg11.jpg); /* White background with some transparency */
+  background-image: url(./bg11.jpg);
+  /* White background with some transparency */
   overflow-y: auto;
-  transition: opacity 2s ease; 
+  transition: opacity 2s ease;
 }
 
 .overlay-content {
   position: relative;
-  top: 80%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Center the content */
+  top: 80%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Center the content */
   padding: 50px;
   margin-top: 250px;
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff;
+  /* White background */
   border-radius: 5px;
-  width: 50%; /* Adjust the width as needed */
-  max-width: 1000px; /* Limit the maximum width of the overlay content */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.318); /* Add a shadow for depth */
+  width: 50%;
+  /* Adjust the width as needed */
+  max-width: 1000px;
+  /* Limit the maximum width of the overlay content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.318);
+  /* Add a shadow for depth */
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 1s ease;
 }
 
-.divider-line{
+.divider-line {
   width: 230px;
   height: 5px;
   background-color: #000000;
@@ -456,6 +476,7 @@ body{
   padding: 20px;
   margin-left: 875px;
 }
+
 .sub_cnt:after {
   position: absolute;
   top: -100px;
@@ -475,11 +496,15 @@ button {
   height: 80px;
   background-color: transparent;
   overflow: hidden;
-  border:1px solid #333;
+  border: 1px solid #333;
   transition: all 0.4s ease-in-out 0s;
   cursor: pointer;
 }
-.arrow,.arrow:after, button:after, button:before {
+
+.arrow,
+.arrow:after,
+button:after,
+button:before {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
@@ -489,36 +514,51 @@ button {
   background-color: #000;
   transition: all 0.4s ease-in-out 0s;
 }
-.arrow:after, button:after, button:before { content: ''; }
-.arrow:after { transform: translate(0px, -100px); } 
-button:before { transform: translate(-50%, -50%) rotate(-45deg);  }
-button:after { transform: translate(-60px, -75px) rotate(-45deg);  }
 
-button.hover:hover:after
-{ 
+.arrow:after,
+button:after,
+button:before {
+  content: '';
+}
+
+.arrow:after {
+  transform: translate(0px, -100px);
+}
+
+button:before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+button:after {
+  transform: translate(-60px, -75px) rotate(-45deg);
+}
+
+button.hover:hover:after {
   transform: translate(0px, -14px) rotate(-45deg);
 }
-button.hover:hover:before
-{
+
+button.hover:hover:before {
   transform: translate(60px, 45px) rotate(-45deg);
 }
-button.hover:hover .arrow
-{
-  transform: translate(-61px, 45px) rotate(45deg); 
+
+button.hover:hover .arrow {
+  transform: translate(-61px, 45px) rotate(45deg);
 }
+
 button.hover:hover:after,
-button.hover:hover .arrow:after
-{
+button.hover:hover .arrow:after {
   background-color: #fff;
 }
-button.hover:hover
-{ 
-  background-color: red; border-color: red; 
+
+button.hover:hover {
+  background-color: red;
+  border-color: red;
 }
 
 @media screen and (max-width: 768px) {
   .overlay-content {
-    margin: 30% auto; /* Adjust vertical position on smaller screens */
+    margin: 30% auto;
+    /* Adjust vertical position on smaller screens */
   }
 }
 
@@ -528,8 +568,10 @@ button.hover:hover
 /*Circle skill progress*/
 
 .skill-card-container {
-  width: calc(50% - 10em); /* Set width to half of the container with some space between */
-  margin-bottom: 200px; /* Add bottom margin for spacing */
+  width: calc(50% - 10em);
+  /* Set width to half of the container with some space between */
+  margin-bottom: 200px;
+  /* Add bottom margin for spacing */
 }
 
 .skill-bar {
@@ -541,7 +583,8 @@ button.hover:hover
   fill: none;
   stroke: #f7ffcf1b;
   stroke-width: 10;
-  stroke-dasharray: 283; /* Approximate circumference of the circle */
+  stroke-dasharray: 283;
+  /* Approximate circumference of the circle */
   stroke-dashoffset: 0;
   animation: background-circle 2s linear;
 }
@@ -550,17 +593,21 @@ button.hover:hover
   fill: none;
   stroke: #00ff95;
   stroke-width: 10;
-  stroke-dasharray: 0 141.5; /* Half of the circumference of the circle */
+  stroke-dasharray: 0 141.5;
+  /* Half of the circumference of the circle */
   stroke-dashoffset: 141.5;
   animation: progress-circle 2s linear forwards;
 }
 
 .skill-percent {
- 
-    font-family: Arial, sans-serif; /* Specify font family */
-    font-size: 16px; /* Adjust font size as needed */
-    fill: #4caf50; /* Text color */
-  
+
+  font-family: Arial, sans-serif;
+  /* Specify font family */
+  font-size: 16px;
+  /* Adjust font size as needed */
+  fill: #4caf50;
+  /* Text color */
+
 }
 
 @keyframes background-circle {
@@ -570,20 +617,27 @@ button.hover:hover
 }
 
 .skill-bar text {
-  font-family: Arial, sans-serif; /* Specify font family */
-  font-size: 12px; /* Adjust font size as needed */
-  fill: #333; /* Text color */
+  font-family: Arial, sans-serif;
+  /* Specify font family */
+  font-size: 12px;
+  /* Adjust font size as needed */
+  fill: #333;
+  /* Text color */
 }
 
 .skill-cards-container {
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  justify-content: space-between; /* Distribute cards evenly along the container */
-  gap: 20px; /* Add space between cards */
+  flex-wrap: wrap;
+  /* Allow cards to wrap to the next line */
+  justify-content: space-between;
+  /* Distribute cards evenly along the container */
+  gap: 20px;
+  /* Add space between cards */
 }
 
 .skill-card {
-  width: calc(33% - 70px); /* Set width to one-third of the container with some space between */
+  width: calc(33% - 70px);
+  /* Set width to one-third of the container with some space between */
   background-color: #fff;
   border-radius: 20px;
   margin-left: .5px;
@@ -599,31 +653,41 @@ button.hover:hover
 
 .skill-name,
 .skill-percent {
-  font-family: Arial, sans-serif; /* Specify font family */
+  font-family: Arial, sans-serif;
+  /* Specify font family */
   font-weight: 600;
-  font-size: 16px; /* Adjust font size as needed */
-  color: #000000; /* Text color */
-  margin: 5px 0; /* Add some margin for spacing */
-  text-align: center; /* Center align the text */
+  font-size: 16px;
+  /* Adjust font size as needed */
+  color: #000000;
+  /* Text color */
+  margin: 5px 0;
+  /* Add some margin for spacing */
+  text-align: center;
+  /* Center align the text */
 }
 
 .skill-card:hover .skill-name,
 .skill-card:hover .skill-percent {
-  animation: pulse 1s infinite alternate; /* Apply pulse animation */
+  animation: pulse 1s infinite alternate;
+  /* Apply pulse animation */
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1); /* Initial scale */
+    transform: scale(1);
+    /* Initial scale */
   }
+
   100% {
-    transform: scale(1.1); /* Scale up to 1.1 */
+    transform: scale(1.1);
+    /* Scale up to 1.1 */
   }
 }
 
 @media screen and (max-width: 768px) {
   .skill-card {
-      width: calc(50% - 20px); /* Set width to half of the container with some space between for smaller screens */
+    width: calc(50% - 20px);
+    /* Set width to half of the container with some space between for smaller screens */
   }
 }
 
@@ -645,7 +709,8 @@ button.hover:hover
   height: 400px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center; /* Center the slider horizontally */
+  justify-content: center;
+  /* Center the slider horizontally */
 }
 
 .card {
@@ -656,17 +721,17 @@ button.hover:hover
   margin: 0 10px;
   display: flex;
   align-items: flex-end;
-  transition: .6s cubic-bezier(.28,-0.03,0,.99);
-  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+  transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
 
-.card > .row {
+.card>.row {
   color: white;
   display: flex;
   flex-wrap: nowrap;
 }
 
-.card > .row > .icon {
+.card>.row>.icon {
   background: #223;
   color: white;
   width: 70px;
@@ -677,7 +742,7 @@ button.hover:hover
   text-align: center;
 }
 
-.card > .row > .description {
+.card>.row>.description {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -697,7 +762,7 @@ button.hover:hover
 
 .description h4 {
   text-transform: uppercase;
-  background-color:rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   text-align: center;
 }
 
@@ -705,11 +770,11 @@ input {
   display: none;
 }
 
-input:checked + label {
+input:checked+label {
   width: 600px;
 }
 
-input:checked + label .description {
+input:checked+label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
@@ -717,12 +782,15 @@ input:checked + label .description {
 .card[for="c1"] {
   background-image: url('./school/cabetican-elem.png');
 }
+
 .card[for="c2"] {
   background-image: url('./school/hauJHS.jpg');
 }
+
 .card[for="c3"] {
   background-image: url('./school/hauSHS.jpg');
 }
+
 .card[for="c4"] {
   background-image: url('./school/hauCollege.png');
 }
@@ -731,54 +799,57 @@ input:checked + label .description {
 
 @media screen and (max-width: 768px) {
   .card {
-      width: calc(100% - 20px); /* Set width to full width with some space between for smaller screens */
+    width: calc(100% - 20px);
+    /* Set width to full width with some space between for smaller screens */
   }
 }
 
 /* Image cards */
 
-.card-container1{
+.card-container1 {
   display: flex;
   justify-content: center;
   flex: wrap;
   gap: 25px;
-  margin-top: 50px;
+  margin-bottom: -30px;
 }
 
-.card1{
+.card1 {
   width: 325px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: transform 0.6s ease;
 }
-.card1:hover{
+
+.card1:hover {
   transform: translateY(-20px);
 }
-.card1 img{
+
+.card1 img {
   width: 100%;
   height: auto;
   object-fit: contain;
 
 }
 
-.card-content1{
+.card-content1 {
   padding: 20px;
 }
 
-.card-content1 h1{
+.card-content1 h1 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.card-content1 p{
+.card-content1 p {
   font-size: 16px;
   color: #666;
   margin-bottom: 20px;
 }
 
-.card-button{
+.card-button {
   display: inline-block;
   background-color: #fff6f6;
   color: rgb(255, 1, 1);
@@ -791,61 +862,152 @@ input:checked + label .description {
 
 
 /* Add responsive styles */
-body, html {
+body,
+html {
   font-size: 16px;
 }
 
 /* Adjust layout for smaller screens */
 @media screen and (max-width: 768px) {
   .divider {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .left-side {
-      order: 2;
+    order: 2;
   }
 
   .right-side {
-      order: 1;
-      background-position: center;
+    order: 1;
+    background-position: center;
   }
 
   .right-side .slider img {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .content {
-      padding: 20px;
+    padding: 20px;
   }
 
   .content footer ul {
-      justify-content: center;
+    justify-content: center;
   }
 
   .content footer li {
-      margin: 10px;
+    margin: 10px;
   }
 
   .overlay-content {
-      margin: 30% auto;
+    margin: 30% auto;
   }
 
   .skill-card {
-      width: calc(50% - 20px);
+    width: calc(50% - 20px);
   }
 
   .wrapper {
-      height: auto;
+    height: auto;
   }
 
   .container {
-      height: auto;
+    height: auto;
   }
 
   .card {
-      width: calc(100% - 20px);
+    width: calc(100% - 20px);
   }
 }
 
 
+/* testimonial */
+figure.snip1390 {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  background-color: #0d3c1f;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+figure.snip1390 *,
+figure.snip1390 *:before,
+figure.snip1390 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+figure.snip1390 figcaption {
+  width: 100%;
+}
+
+figure.snip1390 h2,
+figure.snip1390 h4,
+figure.snip1390 blockquote {
+  margin: 0;
+}
+
+figure.snip1390 h2,
+figure.snip1390 h4 {
+  font-weight: 300;
+}
+
+figure.snip1390 h2 {
+  color: #f2ffc8;
+}
+
+figure.snip1390 h4 {
+  color: #a6a6a6;
+}
+
+figure.snip1390 blockquote {
+  font-size: 1em;
+  padding: 45px 20px 40px 50px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative;
+}
+
+figure.snip1390 blockquote:before {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 100px;
+  opacity: 0.75;
+  font-style: normal;
+  top: -20px;
+  left: -10px;
+}
+
+figure.snip1390 .profile {
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  border: solid 5px #000000;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}

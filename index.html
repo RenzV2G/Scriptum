@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/pages/style/images/logo-icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Alfa+Slab+One&family=Plaster&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    <div class="loader">
+        <img src="pages/loading/2.png">
+       
+    </div>
     
     <!--Homepage Menu-->
     <div class="wrapper">
@@ -49,10 +53,10 @@
                 <!-- Your menu content goes here -->
                 <ul>
 
-                    <li><a target="_blank" href="./pages/AboutMe.html" data-text="About Me">About Me</a></li>
-                    <li><a target="_blank" href="./pages/Projects.html" data-text="Projects">Projects</a></li>
-                    <li><a target="_blank" href="./pages/Contact.html" data-text="Contact Me">Contact Me</a></li>
-                    <li><a target="_blank" href="#" data-text="Close Overlay" id="closeOverlayBtn">- Close -</a></li>
+                    <li><a  href="./pages/AboutMe.html" data-text="About Me">About Me</a></li>
+                    <li><a  href="./pages/Projects.html" data-text="Projects">Projects</a></li>
+                    <li><a  href="./pages/Contact.html" data-text="Contact Me">Contact Me</a></li>
+                    <li><a  href="#" data-text="Close Overlay" id="closeOverlayBtn">- Close -</a></li>
 
                 </ul>
             </div>
@@ -66,6 +70,16 @@
 
 
     <script>
+        
+        window.addEventListener("load", () =>{
+            const loader = document.querySelector(".loader");
+            loader.classList.add("loader--hidden");
+
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(document.querySelector(".loader"));
+            });
+        });
+        
 
         //Open Overlay
         document.addEventListener("DOMContentLoaded", function () {
@@ -193,6 +207,8 @@
         }
 
         animate();
+
+
 
     </script>
 
