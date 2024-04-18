@@ -13,7 +13,6 @@
 <body>
     <div class="loader">
         <img src="pages/loading/2.png">
-       
     </div>
     
     <!--Homepage Menu-->
@@ -71,14 +70,27 @@
 
     <script>
         
-        window.addEventListener("load", () =>{
-            const loader = document.querySelector(".loader");
-            loader.classList.add("loader--hidden");
+// JavaScript code for the loader
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
 
-            loader.addEventListener("transitionend", () => {
-                document.body.removeChild(document.querySelector(".loader"));
-            });
+    // Function to hide the loader
+    const hideLoader = () => {
+        loader.classList.add("loader--hidden");
+
+        // Remove the loader from the DOM after it's hidden
+        loader.addEventListener("transitionend", () => {
+            document.body.removeChild(loader);
         });
+    };
+
+    // Hide loader when clicked anywhere on the page
+    loader.addEventListener("click", hideLoader);
+
+    // Hide loader after a set timeout even if user doesn't tap
+    setTimeout(hideLoader, 5000); // Adjust timing as needed
+});
+
         
 
         //Open Overlay
